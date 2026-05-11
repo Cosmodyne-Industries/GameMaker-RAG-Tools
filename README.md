@@ -4,16 +4,16 @@
 
 A niche solution for a niche problem. This is a lightweight, 'human-in-the-loop' RAG tool designed to make AI collaboration cheaper and easier for amateur or cash-strapped GameMaker devs.  
 
-This spiritual and, for that matter, *actual* successor to 'gml-code-dump' (my first Python script and GitHub repo). The three original scripts now combined into one and wrapped in a pleasantly aesthetic windows-95-chic UI. Also with a couple of helpful new features.
+This is a spiritual and, for that matter, *actual* successor to 'gml-code-dump' (my first Python script and GitHub repo). The three original scripts now combined into one and wrapped in a pleasantly aesthetic windows-95-chic UI. Also with a couple of helpful new features.
 
 
 ## Explanation
 
 I've been building with GameMaker since I was 15 and, like many, have in recent years enjoyed leveraging AI to build more complex games than I could on my own. This quickly settled into a frustratingly slow-paced nightmare, with me as debugger and copy-paster-in-chief, dreading the moment every 45 minutes in which I needed to start a new conversation and explain for the 97th time that draw_rectangle() takes 5 arguments and not 6. 
 
-Eventually I caved and paid for a premium AI subscription. Claude could now read the entire project file on his own and bugs that would have taken 3 hours to find and fix were now done in 10 seconds. The honeymoon lasted about a week. Which is how long it took me to completely lose track of the architecture of my game. It got so bad, and I so lost in the end, that I had to revert to an early save.  
+Eventually I caved and paid for a premium AI subscription. Claude could now read the entire project file on his own, and bugs that would have taken 3 hours to find and fix were now being resolved quietly in the background without me even knowing about it. The honeymoon lasted about a week. Which is roughly how long it took me to completely lose track of the architecture of my game. It got so bad, and I so lost, that in the end I had to revert to an early save.  
 
-I thought that being the human-bottleneck in the workflow was a problem, when really, it was the solution. At least when I was in the middle, diligently copying and pasting from chatbot to GameMaker, I understood the project and the layout. Every bug fix was a well-earned lesson for next time. So, I've decided to go back the free chatbot sessions and save a few pennies & tokens in the process. 
+I thought that being the human-bottleneck in the workflow was a problem when, really, it was the solution. At least when I was in the middle, diligently copying and pasting code from chatbot to GameMaker and back again, I understood the project and the layout. Every bug fix was a well-earned lesson for next time. So, I've decided to go back the free chatbot sessions and save a few pennies & tokens in the process. 
 
 This tool is designed to tackle some of the inherent frustrations of working with free online chatbots. 
 
