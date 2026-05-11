@@ -107,7 +107,7 @@ pythonw gml_tools.py
 
 ![Steps 1–3 and Index Settings](images/gml_tool_3.png)
 
-> ⚠️ **The first index build can take a long time** — anywhere from a few minutes to over an hour depending on the size of your project. This is because every object and script needs to be summarised from scratch, and the API processes them in chunks with a mandatory pause between each to respect rate limits. Go make a cup of tea. **Subsequent refreshes are much faster** — the diff detection means only objects and scripts that have actually changed since the last run will be re-summarised. For most coding sessions this will be a handful of entries at most.
+> ⚠️ **The first index build can take a long time** — can be up to 30 minutes depending on the size of your project. This is because every object and script needs to be summarised from scratch, and the API processes them in chunks with a mandatory pause between each to respect rate limits (I reccomend starting with a 61 second pause between chunks if you're on the beginner tier). Go make a cup of tea. **Subsequent refreshes are much faster** — the diff detection means only objects and scripts that have actually changed since the last run will be re-summarised. For most sessions this will be a handful of entries at most.
 
 1. Click **Step 1: Rebuild Dump** — this scans your project and writes `game_dump.txt` to your output folder. Takes a few seconds.
 2. Click **Step 2: Refresh Index** — this sends your code to the Claude API and writes `game_index.txt`. Watch the log panel on the right for progress.
