@@ -48,9 +48,8 @@ The workflow has four steps:
 
 GML Tools writes two files — `game_dump.txt` and `game_index.txt` — to a separate output folder that you choose, rather than directly into your GameMaker project folder. This is intentional.
 
-GameMaker's **Save As** function only copies the files it knows about. If the dump and index lived inside your project folder, a Save As would leave them behind, and your new project copy would have no index. By keeping them in a separate folder, they survive any GameMaker file operations completely untouched.
+GameMaker's **Save As** function only copies the files it knows about. If the dump and index lived inside your project folder, a Save As would leave them behind, and your new project copy would have no index (meaning the app will try to create a brand new one from scratch, which takes ages). By keeping them in a separate folder, they survive any GameMaker file operations completely untouched.
 
-It also means your GameMaker project folder stays clean — no stray `.txt` files that GameMaker doesn't know what to do with, and no risk of accidentally including them in source control.
 
 **After a Save As:** simply click **Browse…** next to SOURCE in the app and point it at your new project folder. Your output folder — and everything in it — stays exactly where it was. If you want a fresh index for the new project version, run Steps 1 and 2. If the code hasn't changed much, the diff detection will only re-summarise what's actually different, so it won't take long.
 
@@ -72,7 +71,7 @@ pip install anthropic pyperclip
 
 **Step 1 — Install dependencies**
 
-If you haven't already:
+If you haven't already, open Command Prompt or Powershell and type:
 
 ```
 pip install anthropic pyperclip
@@ -84,11 +83,11 @@ Add your Anthropic API key as an environment variable. On Windows: search *Edit 
 
 **Step 3 — Place the files**
 
-Save `gml_tools.py` and `GML Tools.bat` somewhere permanent — a dedicated tools folder works well. They don't need to live inside your GameMaker project.
+Save `gml_tools.py` somewhere permanent — a dedicated tools folder works well. They don't need to live inside your GameMaker project.
 
 **Step 4 — Launch the app**
 
-Double-click `GML Tools.bat`. No console window will appear. If you'd rather run it manually:
+Double-click `gml_tools.py`. A console window will appear and run in the background (you can ignore it). If you'd rather run it manually:
 
 ```
 pythonw gml_tools.py
@@ -114,7 +113,7 @@ pythonw gml_tools.py
 2. Click **Step 2: Refresh Index** — this sends your code to the Claude API and writes `game_index.txt`. Watch the log panel on the right for progress.
 3. If you are on a higher API tier, you can reduce the wait time between chunks in **⚙ Settings** to speed things up considerably.
 
-### After making changes to your code
+### After making changes to your code (at the end of a session, or as often as you like)
 
 Run **Step 1** then **Step 2** again. Only changed objects/scripts will be re-summarised — subsequent refreshes are much faster.
 
@@ -173,7 +172,6 @@ Point the SOURCE folder at your new project location — click **Browse…** nex
 | File | Purpose |
 |---|---|
 | `gml_tools.py` | Main application |
-| `GML Tools.bat` | Double-click launcher (no console window) |
 | `gml_tools_config.json` | Auto-generated — saves your folder paths, settings, and developer notes |
 | `game_dump.txt` | Auto-generated — full cleaned code dump (in your output folder) |
 | `game_index.txt` | Auto-generated — AI-generated index (in your output folder) |
