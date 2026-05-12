@@ -9,7 +9,7 @@ It is a spiritual, and for that matter *actual*, successor to 'gml-code-dump' (m
 
 ## Explanation
 
-I’ve recently decided to stop (or significantly reduce) using agentic AI tools for my GameMaker projects because it was just too easy to hand over control and lose touch with my own game. Free chatbots are extrememly frustrating to use for coding projects, but at least the constant back‑and‑forth keeps me grounded in the code and learning from every fix. In the end, I realised that being the copy-paster-in-cheif “bottleneck” was a feature and not a bug, so I’m returning to simpler tools and keeping myself in the loop.
+I’ve recently decided to stop (or significantly reduce) using agentic AI tools for my GameMaker projects because it was becoming too easy to hand over full control and lose touch with my own game. I am, however, still open to using free browser-based chatbots. They are extrememly frustrating and slow to use for coding projects but at least the constant back‑and‑forth keeps me grounded and learning. Ultiamtely, I've come to realise that being the human “bottleneck” is the solution and not the problem, so I’m returning to simpler tools and keeping myself in the loop.
 
 
 ---
