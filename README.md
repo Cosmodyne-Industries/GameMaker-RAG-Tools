@@ -2,20 +2,15 @@
 
 ![GML Tools open alongside GameMaker IDE](images/gml_tool_1.png)
 
-A niche solution for a niche problem. This is a lightweight, 'human-in-the-loop' RAG tool designed to make AI collaboration cheaper and easier for amateur or cash-strapped GameMaker devs.  
+This is a lightweight, 'human-in-the-loop' RAG workflow designed to make AI collaboration cheaper and easier for amateur or cash-strapped GameMaker devs.  
 
-This is a spiritual and, for that matter, *actual* successor to 'gml-code-dump' (my first Python script and GitHub repo). The three original scripts now combined into one and wrapped in a pleasantly aesthetic windows-95-chic UI. Also with a couple of helpful new features.
+It is a spiritual, and for that matter *actual*, successor to 'gml-code-dump' (my first Python script and GitHub repo!). The three original scripts now combined into one and wrapped in a pleasantly aesthetic windows-95-chic UI. Also with a couple of helpful new features.
 
 
 ## Explanation
 
-I've been building with GameMaker since I was 15 and, like many, have in recent years enjoyed leveraging AI to build more complex games than I could on my own. This quickly settled into a frustratingly slow-paced nightmare, with me as debugger and copy-paster-in-chief, dreading the moment every 45 minutes in which I needed to start a new conversation and explain for the 97th time that draw_rectangle() takes 5 arguments and not 6. 
+I’ve recently decided to stop (or significantly reduce) using agentic AI tools for my GameMaker projects because it was just too easy to hand over control and lose touch with my own game. Free chatbots are extrememly frustrating to use for coding projects, but at least the constant back‑and‑forth keeps me grounded in the code and learning from every fix. In the end, I realised that being the copy-paster-in-cheif “bottleneck” was a feature and not a bug, so I’m returning to simpler tools and keeping myself in the loop.
 
-Eventually I caved and paid for a premium AI subscription. Claude could now read the entire project file on his own, and bugs that would have taken 3 hours to find and fix were now being resolved quietly in the background without me even knowing about it. The honeymoon lasted about a week. Which is roughly how long it took me to completely lose track of the architecture of my game. It got so bad, and I so lost, that in the end I had to revert to an early save.  
-
-I thought that being the human-bottleneck in the workflow was a problem when, really, it was the solution. At least when I was in the middle, diligently copying and pasting code from chatbot to GameMaker and back again, I understood the project and the layout. Every bug fix was a well-earned lesson for next time. So, I've decided to go back the free chatbot sessions and save a few pennies & tokens in the process. 
-
-This tool is designed to tackle some of the inherent frustrations of working with free online chatbots. 
 
 ---
 
@@ -23,15 +18,17 @@ This tool is designed to tackle some of the inherent frustrations of working wit
 
 ![GML Tools UI](images/gml_tool_2.png)
 
-This tool is designed to make it easier and more efficient to collaborate on GameMaker projects with free online chatbots (e.g. ChatGPT, Claude chat, Copilot chat). At its heart, this a basic RAG (Retrieval-augmented Generation) workflow which keeps the user deliberately front-and-centre.
+This tool is designed to make it easier and more efficient to collaborate on GameMaker projects with free online chatbots (e.g. ChatGPT, Claude chat, Copilot chat). At its heart, this a rudimentary RAG (Retrieval-Augmented Generation) workflow which keeps the user deliberately front-and-centre.
 
-A python script reads all the code from your game, cleans and deposits it into a single .txt file, and then makes an API call to Claude Haiku (Anthropic API key not included) to generate a summarised index of every item in your game, its role, and dependencies. The index can then easily be shared with your LLM of choice at the start of each new conversation, to act as the single, authoritative source of context for the rest of the session. 
+A python script reads all the code from your game, cleans and deposits it into a single .txt file, and then makes an API call to Claude Haiku (Anthropic API key not included) to generate a summarised index of every object/script, its role, and dependencies. With the click of a button, the index can quickly be shared with your LLM of choice at the start of each new conversation, to act as the authoritative source of context for the rest of the session. 
 
-Your LLM can then request to see the full code of whichever objects/scripts/events is relevant to the task at hand. You then simply select the object or script from the list in the UI, add the events you want to share to your "basket", and then click "copy to clipboard" to share it with your AI collaborator. 
+Your LLM can then request to see the full code of whichever objects/scripts/events is most relevant to the task at hand. You simply select the object or script from the list in the UI, add the codeblocks it requested to your "basket", and then click "copy to clipboard" to share it with your AI collaborator. 
 
-This saves you time when starting new conversations, helps the chatbot to understand the broader impacts of code changes and anticipate unintended consequences, and prevents early context bloat. 
+This saves you time when starting new conversations, helps the chatbot to understand the broader impacts of code changes, and prevents early context bloat. 
 
-Additionally, there is an inbuilt "review" button which you can use to get immediate, general feedback and optimisation tips on all the code currently selected in your basket. 
+You can also add some persistent "notes" (specific rules or instructions that you want to apply to every conversation) which will be added to the index automatically when you copy it to clipboard. 
+
+Additionally, there is an inbuilt "review" button which you can use to get immediate, general feedback and optimisation tips on all the code currently selected in your basket. This uses the most advanced commercailly-avaialble Anthorpic model (Opus), so you can then pass the suggestions on directly to your free LLM to action. 
 
 Note that generating or updating the index, or using the "review" button, will incur a very small API cost.
 
